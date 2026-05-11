@@ -466,7 +466,7 @@ class EnigmaMediaPlayer(MediaPlayerEntity):
     async def async_turn_on(self):
         """Turn the media player on."""
         await self.request_call('/web/powerstate?newstate=4')
-        self.async_update()
+        await self.async_update()
 
 # SET - Turn of
     async def async_turn_off(self):
